@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { WebComponentsServiceService } from '../web-components-service.service';
 
@@ -25,7 +25,7 @@ export class FormComponent {
   onSubmit() {
     let framework = "angular";
     console.log("submitted Angular");
-    
+
     // Aufruf des Services und der Funktion "getInputValues" 
     // mit Übergabeparameter des Namen des Frameworks
     WebComponentsServiceService.getInputValues(framework);
