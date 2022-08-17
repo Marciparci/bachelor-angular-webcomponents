@@ -1,0 +1,23 @@
+<!-- Aufbau des Angular Formulars -->
+<div class="Acenter">
+    <form [formGroup]="exampleForm" (ngSubmit)="onSubmit()">
+        <div class='formDiv'>
+            <label htmlFor="text">Text</label>
+            <input type="text" name="text" class='formInput' id="Atext" formControlName="text">
+
+        </div>
+        <div class='formDiv'>
+            <label htmlFor="number">Nummer</label>
+            <input type="number" name="number" class='formInput' id='Anumber' formControlName="number">
+
+        </div>
+        <div class='formDiv'>
+            <label htmlFor="date">Datum</label>
+            <input type="date" name="date" class='formInput' id='Adate' formControlName="date">
+
+        </div>
+        <div class='formDiv'>
+            <button class='submitButton' type="submit">Absenden</button>
+        </div>
+    </form>
+</div>
