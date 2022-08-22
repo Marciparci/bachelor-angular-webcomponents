@@ -25,9 +25,5 @@ import { createCustomElement } from '@angular/elements';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private injector: Injector) {
-    const formEl = createCustomElement(FormComponent, {injector: this.injector});
-    customElements.define("angular-form", formEl);
-  }
-  ngDoBootstrap() {}
- }
+  
+}
