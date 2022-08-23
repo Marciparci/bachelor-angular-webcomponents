@@ -1,11 +1,11 @@
 .Uangular {
     color: red;
-    margin-left: 120px;
+    margin-left: 260px;
 }
 
 .Ureact {
     color: #61dafb;
-    margin-left: 120px;
+    margin-left: 160px;
 }
 
 form {
@@ -30,7 +30,7 @@ label {
 .submitButton {
     height: 60px;
     width: 240px;
-    margin-left: 10%;
+    margin-left: 4%;
     background-color: #00bc19;
     color: white;
     border-radius: 5px;

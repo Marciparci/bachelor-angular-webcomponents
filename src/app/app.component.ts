@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild, ViewEncapsulation, Inject, ElementRef, AfterViewChecked, AfterContentInit, OnChanges, DoCheck } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { HttpClient } from "@angular/common/http";
-//import { ElementRef } from 'react';
+import { WebComponentsServiceService } from './web-components-service.service';
 
 @Component({
   selector: 'app-root',
@@ -19,8 +19,7 @@ export class AppComponent implements OnInit {
   constructor(
     private httpClient: HttpClient,
     @Inject(DOCUMENT) doc: Document
-  ) {
-  }
+  ) { }
 
   // Funktion löst beim Ersten Initialisieren der Anwendung aus
   ngOnInit() {
@@ -42,5 +41,13 @@ export class AppComponent implements OnInit {
       const date = (<HTMLInputElement>document.getElementById("date"));
       date.value = this.inputs.date;
     })
+  }
+
+  // Funktion löst aus, wenn der "Absenden" Button des React Formulars betätigt wird
+  onSubmit() {
+    // Aufruf des Services und der Funktion "getInputValues" 
+    // mit Übergabeparameter des Namen des Frameworks
+    let framework = "react";
+    WebComponentsServiceService.getInputValues(framework);
   }
 }
